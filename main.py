@@ -51,7 +51,7 @@ while True:
             print("example: 123")
             change_cards = list(int(x) - 1 for x in input(">"))
 
-            if len(change_cards) > 5 or len(change_cards) < 1:
+            if len(change_cards) > 5 or len(change_cards) < 1 or any(x < 0 or x > 4 for x in change_cards):
                 print("Invalid input. Please enter 1-5 cards.")
                 continue
 
